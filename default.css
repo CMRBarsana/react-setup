@@ -1,0 +1,55 @@
+@import './fonts.css';
+
+:root {
+  --font-sans: 'Playfair Display', serif;
+  --font-sans-serif: 'Open Sans', sans-serif;
+
+  /* BLACK */
+  --color-black: #303030;
+
+  /* GRAY */
+  --color-gray-muted: #f4f4f4;
+  --color-gray-lightest: #efefef;
+  --color-gray-lighter: #dedede;
+  --color-gray-light: #bcbcbc;
+  --color-gray-base: #909090;
+  --color-gray-dark: #828282;
+  --color-gray-darker: #737373;
+  --color-gray-darkest: #565656;
+
+  /* PRIMARY */
+  --color-primary-muted: #e3e8f6;
+  --color-primary-light: #748dd1;
+  --color-primary-base: #314c94;
+  --color-primary-dark: #1d2c56;
+
+  /* SECONDARY */
+  --color-secondary-muted: #fcead6;
+  --color-secondary-light: #f5ba77;
+  --color-secondary-base: #f0932b;
+  --color-secondary-dark: #d97a0f;
+
+  /* INFO */
+  --color-info-muted: #dbf1fc;
+  --color-info-light: #19b5fe;
+  --color-info-base: #1297e0;
+  --color-info-dark: #0077c0;
+
+  /* SUCCESS */
+  --color-success-muted: #d3f5e2;
+  --color-success-light: #4eec91;
+  --color-success-base: #2ecc71;
+  --color-success-dark: #009c41;
+
+  /* WARNING */
+  --color-warning-muted: #fef4e1;
+  --color-warning-light: #ffcf4b;
+  --color-warning-base: #f9b32f;
+  --color-warning-dark: #f39c12;
+
+  /* DANGER */
+  --color-danger-muted: #ffe8e6;
+  --color-danger-light: #ff8c7c;
+  --color-danger-base: #ff6c5c;
+  --color-danger-dark: #d73c2c;
+}
