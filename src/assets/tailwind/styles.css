@@ -1,0 +1,15 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* BASE - html defaults */
+@import './base/_index.scss';
+
+/* ATOMS - tiny ui components */
+@import './atoms/_index.scss';
+
+/* LIBS - library overrides */
+@import './libs/_index.scss';
+
+/* COMPONENTS - large components */
+@import './components/_index.scss';

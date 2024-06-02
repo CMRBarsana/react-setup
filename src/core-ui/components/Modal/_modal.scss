@@ -1,0 +1,39 @@
+@keyframes fade-in {
+  from {
+    @apply opacity-0;
+  }
+  to {
+    @apply opacity-30;
+  }
+}
+@keyframes fade-out {
+  from {
+    @apply opacity-30;
+  }
+  to {
+    @apply opacity-0;
+  }
+}
+
+.ds-modal-overlay-animation {
+  animation: fade-in 200ms ease-out forwards;
+}
+
+.ds-modal-size {
+  &-sm {
+    @apply w-[22.5rem];
+  }
+  &-md {
+    @apply w-[31.25rem];
+  }
+  &-lg {
+    @apply w-[50rem];
+  }
+  &-xl {
+    @apply w-[71.25rem];
+  }
+}
+
+.ds-modal-card {
+  @apply fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 rounded-md bg-white;
+}
