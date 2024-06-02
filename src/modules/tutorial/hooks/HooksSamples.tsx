@@ -3,6 +3,7 @@ import { Navigate, NavLink, Route, Routes } from 'react-router-dom';
 import { Button } from 'core-ui';
 
 import UseCallback from './UseCallback';
+import Dashboard from './UseContext/Dashboard';
 import UseEffect from './UseEffect';
 import UseMemo from './UseMemo';
 import UseRef from './UseRef';
@@ -15,6 +16,7 @@ function ReactHooks() {
     { path: 'use-memo', name: 'useMemo', element: <UseMemo /> },
     { path: 'use-callback', name: 'useCallback', element: <UseCallback /> },
     { path: 'use-ref', name: 'useRef', element: <UseRef /> },
+    { path: 'use-context', name: 'useContext', element: <Dashboard /> },
   ];
 
   return (
