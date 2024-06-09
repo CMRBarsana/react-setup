@@ -2,11 +2,11 @@ import { NavLink, Route, Routes } from 'react-router-dom';
 
 import { Button, Toast } from 'core-ui';
 
-import Customers from 'modules/Customers';
 import ComponentSamples from 'modules/samples/components/ComponentSamples';
+import Customers from 'modules/samples/routes/Customers';
+import RouteSample from 'modules/samples/routes/RouteSample';
 import TailwindSample from 'modules/samples/tailwind/TailwindSample';
 import ReactHooks from 'modules/tutorial/hooks/HooksSamples';
-import HookSamples from 'modules/tutorial/HookSamples';
 
 function App() {
   const list = [
@@ -14,9 +14,12 @@ function App() {
     { path: '/components', name: 'Components', content: <ComponentSamples /> },
 
     // FOR REMOVAL
-    { path: '/route', name: 'Route', content: <Customers /> },
-    { path: '/samples', name: 'Samples', content: <HookSamples /> },
-    { path: '/react-hooks', name: 'React Hooks', content: <ReactHooks /> },
+    { path: '/route', name: 'Route', content: <RouteSample /> },
+    {
+      path: '/react-hooks',
+      name: 'React Hooks',
+      content: <ReactHooks />,
+    },
   ];
 
   return (
@@ -39,12 +42,20 @@ function App() {
               </NavLink>
             </div>
           ))}
+          <NavLink to="customers">
+            {({ isActive }) => (
+              <Button solid primary={!isActive} secondary={isActive} className="w-full">
+                Dynamic
+              </Button>
+            )}
+          </NavLink>
         </div>
         <div className="h-full flex-1 overflow-y-scroll rounded-md border-2 border-solid border-primary p-3">
           <Routes>
             {list.map((item) => (
               <Route key={item.name} path={`${item.path}/*`} element={item.content} />
             ))}
+            <Route path="customers/:id?/sample/:userId?" element={<Customers />} />
             <Route path="*" element={<div>Page not found</div>} />
           </Routes>
         </div>

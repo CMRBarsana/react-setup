@@ -15,7 +15,11 @@ function ReactHooks() {
     { path: 'use-effect', name: 'useEffect', element: <UseEffect /> },
     { path: 'use-memo', name: 'useMemo', element: <UseMemo /> },
     { path: 'use-callback', name: 'useCallback', element: <UseCallback /> },
-    { path: 'use-ref', name: 'useRef', element: <UseRef /> },
+    {
+      path: 'use-ref',
+      name: 'useRef',
+      element: <UseRef />,
+    },
     { path: 'use-context', name: 'useContext', element: <Dashboard /> },
   ];
 

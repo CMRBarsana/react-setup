@@ -14,6 +14,10 @@ function UseEffect() {
   };
 
   useEffect(() => {
+    toastSuccess('Page has loaded');
+  }, []);
+
+  useEffect(() => {
     toastSuccess('Effect changes detected');
   }, [count]);
 

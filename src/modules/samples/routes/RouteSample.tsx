@@ -2,7 +2,10 @@ import { Navigate, NavLink, Route, Routes } from 'react-router-dom';
 
 import { Button } from 'core-ui';
 
-function Customers() {
+import Admin from './Admin';
+import Transactions from './Transactions';
+
+function RouteSample() {
   return (
     <div>
       <NavLink to="dashboard" className="mr-2">
@@ -12,28 +15,28 @@ function Customers() {
           </Button>
         )}
       </NavLink>
-      <NavLink to="details" className="mr-2">
+      <NavLink to="admin" className="mr-2">
         {({ isActive }) => (
           <Button solid primary={!isActive} secondary={isActive}>
-            Details
+            Admin
           </Button>
         )}
       </NavLink>
-      <NavLink to="settings">
+      <NavLink to="transactions">
         {({ isActive }) => (
           <Button solid primary={!isActive} secondary={isActive}>
-            Settings
+            Transactions
           </Button>
         )}
       </NavLink>
       <Routes>
         <Route path="dashboard" element={<div>Dashboard</div>} />
-        <Route path="details" element={<div>Details</div>} />
-        <Route path="settings" element={<div>Settings</div>} />
+        <Route path="admin" element={<Admin />} />
+        <Route path="transactions" element={<Transactions />} />
         <Route path="*" element={<Navigate to="dashboard" />} />
       </Routes>
     </div>
   );
 }
 
-export default Customers;
+export default RouteSample;
